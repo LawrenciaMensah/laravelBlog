@@ -4,17 +4,24 @@ namespace App\Http\Controllers;
 class pagesController extends Controller{
 public function getIndex(){
 
-return "Home";
+return view('welcome');
 }
 
 public function getabout(){
+ 
+ $first= 'lawrie';
+ $last='Mensah';
+ $full='$first. " ".$last;'
+return view('pages.about')->with("fullname",$full) ;
+
+
 
 }
 
 
 public function getcontacts(){
 
-return "Hello contact page";
+return view('contacts');
 
 
 }
